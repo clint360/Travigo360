@@ -1,25 +1,22 @@
-{
-  "name": "server.travigo360",
-  "version": "1.0.0",
-  "description": "Backend repository for the bus agency tickets booking application",
-  "main": "index.js",
+{ 
   "scripts": {
-    "test": "npm start"
+  "build": "tsc",
+  "start": "ts-node src/index.ts",
+  "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+}
+,
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase": "^10.4.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://githun.com/clint360/Travigo360"
-  },
-  "keywords": [
-    "Travel",
-    "Agency",
-    "Typescript",
-    "MTN",
-    "HackerEarth",
-    "Full",
-    "Stack",
-    "etc"
-  ],
-  "author": "Clint Animbom",
-  "license": "MIT"
+  "devDependencies": {
+    "@types/cors": "^2.8.14",
+    "@types/express": "^4.17.18",
+    "@types/node": "^20.6.4",
+    "ts-node-dev": "^2.0.0"
+  }
 }
