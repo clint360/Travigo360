@@ -1,0 +1,25 @@
+{
+  "name": "server.travigo360",
+  "version": "1.0.0",
+  "description": "Backend repository for the bus agency tickets booking application",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://githun.com/clint360/Travigo360"
+  },
+  "keywords": [
+    "Travel",
+    "Agency",
+    "Typescript",
+    "MTN",
+    "HackerEarth",
+    "Full",
+    "Stack",
+    "etc"
+  ],
+  "author": "Clint Animbom",
+  "license": "MIT"
+}
