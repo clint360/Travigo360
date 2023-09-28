@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { collections, docRefs } from '../db';
-import { User, UserInterface } from '../models/User';
+import { User, UserInterface, UserRole } from '../models/User';
 import {
   doc,
   addDoc,
@@ -11,15 +11,15 @@ import {
 } from 'firebase/firestore';
 import firebase from '../firebase';
 import { timeStampToDateTimeString } from '../utils';
+import { CreateUser, Login } from '../dto/User.dto';
 const db = getFirestore(firebase);
-
 
 export const createUser = async (req: Request, res: Response) => {
     try {
-      const user = req.body;
+      const user = <CreateUser>req.body;
       await addDoc(docRefs.users, {
         ...user,
-        role: 'customer',
+        role: UserRole.customer,
         createdAt: Timestamp.now()
       });
   

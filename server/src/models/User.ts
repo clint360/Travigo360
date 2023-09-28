@@ -13,7 +13,11 @@ export type UserInterface = FirebaseUser & {
     createdAt: Timestamp
   }
   
-  type UserRole = 'ADMIN' | 'CUSTOMER' | 'AGENCY'
+ export enum UserRole {
+  admin = 'ADMIN',
+  customer = 'CUSTOMER',
+  agencyAdmin = 'AGENCY_ADMIN'
+ }
 
   export class User {
     id: string;

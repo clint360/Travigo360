@@ -1,6 +1,6 @@
 
 
-export type UserRole = 'ADMIN' | 'CUSTOMER' | 'AGENCY'
+export type UserRole = 'ADMIN' | 'CUSTOMER' | 'AGENCY_ADMIN'
 
 export type User = {
     id: string;
@@ -8,7 +8,7 @@ export type User = {
     lastName: string;
     email: string;
     password: string;
-    role: UserRole;
+    role: UserRole
     createdAt: string
-    phoneNumber: number
+    phoneNumber: string
 }

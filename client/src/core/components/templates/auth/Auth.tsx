@@ -7,7 +7,8 @@ import AuthHeader from "./components/AuthHeader";
 import styles from "./styles/Auth.module.scss";
 import AuthButton from "./components/AuthButton";
 import OtherAuth from "./components/OtherAuth";
-import Loader from "../../atoms/loader/Loader";
+import { registerAccount } from "@/core/services/AuthService";
+import { useRouter } from "next/navigation";
 
 interface AuthPageProps {
   action: "LOGIN" | "SIGNUP";
@@ -44,6 +45,8 @@ function Auth({ action }: AuthPageProps) {
         : Yup.string(),
   });
 
+  const router = useRouter()
+
   // Define the initial form values
   const initialValues: FormValues = {
     firstName: "",
@@ -75,14 +78,14 @@ function Auth({ action }: AuthPageProps) {
     // Example of how to handle different actions separately
     if (action === "SIGNUP") {
       // Handle Sign Up logic
+        setSubmitting(true) 
+        registerAccount(formValues).then(()=>router.push('/app/agencies'));
+      
       console.log("Signing up with form values:", formValues);
     } else {
       // Handle Log In logic
       console.log("Logging in with form values:", formValues);
     }
-
-    // Reset the submit button state
-    setSubmitting(false);
   };
 
   return (
