@@ -40,6 +40,13 @@
   --card-border-rgb: 131, 134, 135;
 }
 
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -100,8 +107,18 @@ a {
   text-decoration: none;
 }
 
+button {
+   cursor: pointer;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+
+label {
+  font-size: 1rem;
+  color: darkgrey;
+  letter-spacing: 0.7px;
 }

@@ -1,5 +1,8 @@
 import { collection } from 'firebase/firestore';
-import { db } from '../../firebase/clientApp';
+import { getFirestore } from 'firebase/firestore';
+import firebase from '../firebase';
+
+const db = getFirestore(firebase);
 
 export const collections = Object.freeze({
   users: 'users',
