@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import SideBar from '../../organisms/sidebar/SideBar';
 
 function Agencies() {
   return (
-    <div>Agencies</div>
+    <div>
+      <SideBar />
+      <button onClick={()=>{}}>Show Sidebar</button>
+    </div>
   )
 }
 
